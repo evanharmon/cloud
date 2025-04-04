@@ -1,0 +1,23 @@
+# Only applicable for LOCAL tf cloud runs
+# for remote runs, tf cloud takes the workspace variables and creates this file for the run
+# variables can be overriden with a `terraform.auto.tfvars` in the repo workspace folder
+
+# AWS configuration
+cluster_version = "1.31"
+environment  = "dev"
+project_name = "eph-ipv4-karpenter-mng"
+region       = "us-east-1"
+stack_name   = "eph"
+stack_type   = "personal"
+vpc_cidr = "10.0.0.0/16"
+num_azs = 2
+
+# Tags to automatically apply to all AWS resources
+tags = {
+  Environment = "dev"
+  Project     = "eph-ipv4-karpenter-mng"
+  StackName  = "eph"
+  StackType  = "dev"
+  Owner       = "Evan Harmon"
+  CostCenter  = "Cloud"
+}
