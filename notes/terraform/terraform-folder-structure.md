@@ -5,8 +5,7 @@ For this cloud infrastructure repo, I went with the option #1 with dev / staging
 example `./terraform/environments/dev/account1/`
 
 ## For now - just using `dev` environment folder
-`./terraform/environments/dev/webapp.pocs`
-using the `webapp.pocs` account as dev - don't want to create yet another account yet
+`./terraform/environments/dev/eph-music-dev`
 
 ## Notes saved from AI advice on folder structure
 

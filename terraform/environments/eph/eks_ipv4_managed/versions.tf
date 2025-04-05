@@ -4,7 +4,7 @@ terraform {
     organization = "eph-core" 
 
     workspaces { 
-      name = "cloud-aws-eph-ipv4-eks-managed" 
+      name = "cloud-aws-eph-eks-ipv4-managed" 
     } 
   } 
 

@@ -1,7 +1,7 @@
 provider "aws" {
   region = var.region
   # TODO: replace with an assumed_role
-  profile = "webapp-pocs"
+  profile = "eph-music-dev"
 
   default_tags {
     tags = var.tags

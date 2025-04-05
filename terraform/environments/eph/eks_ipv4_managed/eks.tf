@@ -1,6 +1,5 @@
 ################ IPV4 EKS MANAGED NODE GROUPS ################ 
 ######## TODOs
-# Should I be using pod identity or IRSA as a best practice?
 # cloudwatch log group should be managed separately - so the logs don't auto delete or at least so that's an option
 ######## TODOs
 
@@ -20,6 +19,7 @@ module "eks" {
   bootstrap_self_managed_addons = false
   cluster_addons = {
     coredns = {}
+    # TODO - haven't moved this to IRSA yet - mostly using the karpenter mng setup
     eks-pod-identity-agent = {}
     kube-proxy = {}
     vpc-cni = {
@@ -56,6 +56,7 @@ module "eks" {
   eks_managed_node_groups = {
     example = {
       ami_type       = "BOTTLEROCKET_x86_64"
+      # TODO: UNTESTED but try t3.medium to be cheaper instead of ["m6i.large"]
       instance_types = ["m6i.large"]
 
       min_size = 1

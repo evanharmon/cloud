@@ -10,6 +10,6 @@ created a project `cloud-platform`
 Could do a workspace for `staging and prod` in the future.
 
 Personal stacks will have their own workspaces.
-created `cloud-aws-eph-eks` for my personal stack 
+created multiple variations of eks so far `cloud-aws-eph-eks-*`
 
 NO workspace for dev - this means a personal stack can fully behave like staging / prod will.
