@@ -173,7 +173,7 @@ spec:
           values: ["t4g"]
         - key: "karpenter.k8s.aws/instance-cpu"
           operator: In
-          values: ["2", "4"]
+          values: ["4"]
         - key: "karpenter.k8s.aws/instance-hypervisor"
           operator: In
           values: ["nitro"]
@@ -184,7 +184,8 @@ spec:
           operator: In
           values: ["arm64"]
   limits:
-    cpu: 8
+    # Tweak for costs - effectively just limiting to one node for now
+    cpu: 4
   disruption:
     # or use this if you can handle consolidation on the fly: WhenEmptyOrUnderutilized
     consolidationPolicy: WhenEmpty
