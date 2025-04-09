@@ -13,6 +13,8 @@ module "vpc" {
   # Example:
   # private_subnets = ["10.0.96.0/19", "10.0.128.0/19", "10.0.160.0/19"]
   # public_subnets = ["10.0.0.0/19", "10.0.32.0/19", "10.0.64.0/19"]
+  # TODO: I think the cidr_subnet calls should be the below `3` instead - i was creating /18's otherwise with `2`
+  # private_subnets = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 3, k + length(local.azs))]
   private_subnets = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, local.num_azs, k + local.num_azs)]
   public_subnets = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, local.num_azs, k)]
 

@@ -3,7 +3,7 @@
 # variables can be overriden with a `terraform.auto.tfvars` in the repo workspace folder
 
 # AWS configuration
-cluster_version = "1.31"
+cluster_version = "1.32"
 environment  = "dev"
 project_name = "eph-ipv4-karpenter-mng"
 region       = "us-east-1"

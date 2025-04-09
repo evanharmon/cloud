@@ -1,10 +1,16 @@
 # EKS IPV4 KARPENTER WITH MANAGED NODE GROUP
 
+## Warnings
+Right now, tearing this down with karpenter instances up leaves them running!
+this project does not terraform apply cleanly. Runs in to errors around:
+- CoreDNS
+
 ## Features
 IRSA setups!
 
 - karpenter with managed node group
 - vpc cni with network policies
+- working aws-lb-controller
 
 ## Running
 ```bash
