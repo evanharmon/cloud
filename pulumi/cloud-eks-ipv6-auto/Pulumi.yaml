@@ -1,0 +1,10 @@
+name: cloud-eks-ipv6-auto
+description: Cloud EKS ipv6 auto mode cluster
+runtime:
+  name: python
+  options:
+    toolchain: uv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
