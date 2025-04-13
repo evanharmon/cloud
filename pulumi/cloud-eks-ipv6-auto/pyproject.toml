@@ -1,0 +1,8 @@
+[project]
+name = "cloud-eks-ipv6-auto"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pulumi==3.163.0",
+    "pulumi-aws>=6.0.2,<7.0.0",
+]

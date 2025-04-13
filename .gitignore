@@ -1,3 +1,22 @@
+# misc
+.DS_Store
+*.pem
+
+# Temporary directories
+.cache
+
+# tmp files
+*.tmp
+*.log
+
+## https://github.com/github/gitignore/blob/main/Python.gitignore
+# PYTHON - I haven't added them all
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*$py.class
+
 # Local .terraform directories
 **/.terraform/*
 
@@ -38,3 +57,9 @@ terraform.rc
 
 # plans
 tfplan
+
+# PULUMI
+**/.pulumi/*
+
+# RUFF
+.ruff_cache
