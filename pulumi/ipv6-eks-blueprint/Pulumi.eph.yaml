@@ -1,0 +1,19 @@
+config:
+  region: 'us-east-1'
+  sso_admin_role_name: "AWSReservedSSO_AdministratorAccess_914a5dd88129af5a"
+  aws:region: us-east-1
+  aws:profile: eph-music-dev
+  aws:defaultTags:
+    tags:
+      Environment: dev
+      Project: eks-ipv6-bp
+      StackName: eph
+      StackType: personal
+      Owner: Evan Harmon
+      CostCenter: Cloud
+  # cluster_version: "1.32"  # keep off to avoid turning on extended life clusters
+  az_zone_ids:
+    - "use1-az1"
+    - "use1-az2"
+  project_name: "eks-ipv6-bp"
+  vpc_cidr: "10.0.0.0/16"
